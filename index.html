@@ -1,50 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Cubenado | Developed By Dean Rose</title>
-    <link rel="stylesheet" href="styles.css">
-    
-    <script src="https://code.angularjs.org/2.0.0-beta.8/angular2-polyfills.js"></script>
-    <script src="https://code.angularjs.org/tools/system.js"></script>
-    <script src="https://code.angularjs.org/tools/typescript.js"></script>
-    <script src="config.js"></script>
-    <script src="https://code.angularjs.org/2.0.0-beta.8/Rx.js"></script>
-    <script src="https://code.angularjs.org/2.0.0-beta.8/angular2.min.js"></script>
+    <title>Cubenado   | Developed By Dean </title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="//code.angularjs.org/2.0.0-beta.8/angular2-polyfills.js"></script>
+    <script src="//code.angularjs.org/tools/system.js"></script>
+    <script src="//code.angularjs.org/tools/typescript.js"></script>
+    <script src="//code.angularjs.org/2.0.0-beta.8/Rx.js"></script>
+    <script src="//code.angularjs.org/2.0.0-beta.8/angular2.min.js"></script>
+    <script>
+        System.config({
+            transpiler: 'typescript',
+            typescriptOptions: {
+                emitDecoratorMetadata: true
+            },
+            map: {
+                app: './app'
+            },
+            packages: {
+                app: {
+                    main: './main.ts',
+                    defaultExtension: 'ts'
+                }
+            }
+        });
 
+        System
+                .import('app')
+                .catch(console.error.bind(console));
+    </script>
 </head>
 <body>
-
-
-<div class="range-controller">
-
-<div class="sub-container">
-<label for="nbParticles">
-Number of Cubes
-    </label>
-<p id="labelParticles">10</p>
-<input type="range" step="1" value="10" max="10000" min="10" id="nbParticles">
-</div>
-<div class="sub-container">
-<label for="nbParticles">
-Randomness
-
-</label>
-<p id="labelParticles">10</p>
-<input type="range" step="1" value="10" max="10000" min="10" id="nbParticles">
-</div>
-
-</div>
-
-
-<!-- build:js scripts/vendor.js -->
-<!-- bower:js -->
-<!-- endbower -->
-<!-- endbuild -->
-<!-- build:js scripts/main.js -->
-<script src="scripts/ui.js"></script>
-<script src="scripts/main.js"></script>
-<!-- endbuild -->
-
+<my-app>
+    Loading...
+</my-app>
 </body>
 </html>
