@@ -8,7 +8,12 @@ body{
     touch-action: none;
 }
 
-
+/* Fonts */
+.sub-container h1{
+vertical-align: middle;
+font-size: 14px;
+}
+/* END s */
 .sub-container {
     margin-top: 5px;
     margin-bottom: 5px;
