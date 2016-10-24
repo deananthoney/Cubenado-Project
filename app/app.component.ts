@@ -27,13 +27,13 @@ color: cadetblue;
 
   
   <div class="sub-container">
-    <label for="nbParticles">Number of Cubes: <p id="labelParticles">10</p></label>
+    Number of Cubes: <label for="nbParticles"><p id="labelParticles"></p></label>
     <input id="nbParticles" type="range" min="10" max="10000" value="10" step="1">
   </div>
   
   
 <div class="sub-container">
-    <label for="nbParticles"> Randomness: <p id="labelParticles">10</p></label>
+   Randomness: <label for="nbParticles">  <p id="labelParticles"></p></label>
     <input id="nbParticles" type="range" min="0%" max="100%" value="10" step="1">
   </div>
   
